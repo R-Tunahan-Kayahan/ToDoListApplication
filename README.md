@@ -1,251 +1,151 @@
-# TaskFlow
+# 🚀 TaskFlow
 
 <p align="center">
-  <strong>Modern Web Tabanlı Görev ve Proje Yönetim Platformu</strong>
+  <strong>Modern, modüler ve AI destekli görev & proje yönetim platformu</strong>
 </p>
 
 <p align="center">
-  Görevlerin, projelerin, takvim planlamasının, kullanıcı işlemlerinin ve analiz süreçlerinin tek bir platform üzerinden yönetilmesini sağlayan modüler task management uygulaması.
+  TaskFlow, kullanıcıların görevlerini, projelerini, takvimlerini ve çalışma
+  süreçlerini tek bir platform üzerinden yönetebilmesini sağlayan,
+  Node-RED tabanlı REST API mimarisine sahip web tabanlı bir task management uygulamasıdır.
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Frontend-JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
+  <img src="https://img.shields.io/badge/Backend-Node--RED-8F0000?style=for-the-badge&logo=nodered&logoColor=white">
+  <img src="https://img.shields.io/badge/UI-Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white">
+  <img src="https://img.shields.io/badge/Auth-Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black">
+  <img src="https://img.shields.io/badge/AI-Groq-111111?style=for-the-badge">
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Architecture-REST%20API-blue?style=flat-square">
+  <img src="https://img.shields.io/badge/Template-Mustache-orange?style=flat-square">
+  <img src="https://img.shields.io/badge/Database-NoSQL-green?style=flat-square">
+  <img src="https://img.shields.io/badge/License-Educational-lightgrey?style=flat-square">
 </p>
 
 ---
 
-## İçindekiler
+## 📌 İçindekiler
 
-- [Proje Hakkında](#proje-hakkında)
-- [Temel Özellikler](#temel-özellikler)
-- [Sistem Mimarisi](#sistem-mimarisi)
-- [Uygulama Mimarisi](#uygulama-mimarisi)
-- [Frontend Mimarisi](#frontend-mimarisi)
-- [Backend Mimarisi](#backend-mimarisi)
-- [Node-RED Akış Mimarisi](#node-red-akış-mimarisi)
-- [Kimlik Doğrulama Mimarisi](#kimlik-doğrulama-mimarisi)
-- [JWT Yapısı](#jwt-yapısı)
-- [Firebase ve Google Authentication](#firebase-ve-google-authentication)
-- [AI Entegrasyonu](#ai-entegrasyonu)
-- [Veri Akışı](#veri-akışı)
-- [REST API Yapısı](#rest-api-yapısı)
-- [Görev Yönetimi](#görev-yönetimi)
-- [Proje Yönetimi](#proje-yönetimi)
-- [Takvim Sistemi](#takvim-sistemi)
-- [Analiz ve İstatistikler](#analiz-ve-istatistikler)
-- [Çoklu Dil Desteği](#çoklu-dil-desteği)
-- [Bildirim Sistemi](#bildirim-sistemi)
-- [SurveyJS Kullanımı](#surveyjs-kullanımı)
-- [Mustache Template Yapısı](#mustache-template-yapısı)
-- [Dosya ve Klasör Yapısı](#dosya-ve-klasör-yapısı)
-- [Environment Variable Yönetimi](#environment-variable-yönetimi)
-- [Güvenlik](#güvenlik)
-- [Kurulum](#kurulum)
-- [Çalıştırma](#çalıştırma)
-- [Geliştirme Süreci](#geliştirme-süreci)
-- [Git ve Repository Yönetimi](#git-ve-repository-yönetimi)
-- [Teknoloji Yığını](#teknoloji-yığını)
-- [Gelecek Geliştirmeler](#gelecek-geliştirmeler)
-- [Projenin Amacı](#projenin-amacı)
-- [Lisans](#lisans)
+- [Proje Hakkında](#-proje-hakkında)
+- [Temel Özellikler](#-temel-özellikler)
+- [Sistem Mimarisi](#-sistem-mimarisi)
+- [Node-RED Mimarisi](#-node-red-mimarisi)
+- [Frontend Mimarisi](#-frontend-mimarisi)
+- [Kimlik Doğrulama Mimarisi](#-kimlik-doğrulama-mimarisi)
+- [JWT Yapısı](#-jwt-yapısı)
+- [AI Entegrasyonu](#-ai-entegrasyonu)
+- [API Mimarisi](#-api-mimarisi)
+- [Veri Akışı](#-veri-akışı)
+- [Proje Yapısı](#-proje-yapısı)
+- [Kullanılan Teknolojiler](#-kullanılan-teknolojiler)
+- [Environment Yapılandırması](#-environment-yapılandırması)
+- [Güvenlik](#-güvenlik)
+- [Kurulum](#-kurulum)
+- [Çalıştırma](#-çalıştırma)
+- [Geliştirme Süreci](#-geliştirme-süreci)
+- [Frontend Sayfaları](#-frontend-sayfaları)
+- [Görev Yönetimi](#-görev-yönetimi)
+- [Proje Yönetimi](#-proje-yönetimi)
+- [Takvim Sistemi](#-takvim-sistemi)
+- [Analiz Sistemi](#-analiz-sistemi)
+- [Bildirim Sistemi](#-bildirim-sistemi)
+- [Çoklu Dil Desteği](#-çoklu-dil-desteği)
+- [Dosya ve Flow Organizasyonu](#-dosya-ve-flow-organizasyonu)
+- [Hata Yönetimi](#-hata-yönetimi)
+- [Performans ve Bakım](#-performans-ve-bakım)
+- [Deployment](#-deployment)
+- [Gelecek Geliştirmeler](#-gelecek-geliştirmeler)
+- [Sonuç](#-sonuç)
 
 ---
 
-# Proje Hakkında
+# 🎯 Proje Hakkında
 
-**TaskFlow**, kullanıcıların günlük görevlerini, projelerini, çalışma planlarını ve ilerleme durumlarını merkezi bir sistem üzerinden yönetebilmesini amacıyla geliştirilmiş web tabanlı bir görev ve proje yönetim platformudur.
+**TaskFlow**, görev ve proje yönetimini tek bir platform altında birleştirmek
+amacıyla geliştirilmiş web tabanlı bir task management uygulamasıdır.
 
-Uygulama yalnızca temel bir To-Do List mantığı üzerine kurulmamıştır. Görev yönetiminin yanında;
+Uygulama yalnızca temel bir To-Do List yaklaşımı yerine;
 
 - kullanıcı yönetimi,
-- kimlik doğrulama,
-- Google ile giriş,
-- JWT tabanlı oturum yönetimi,
+- görev yönetimi,
 - proje yönetimi,
-- görev-proje ilişkisi,
 - takvim yönetimi,
-- analiz ve istatistikler,
+- analiz ve istatistik,
+- bildirimler,
+- Google Authentication,
+- JWT tabanlı uygulama oturumu,
+- Firebase Authentication,
 - AI destekli içerik üretimi,
 - çoklu dil desteği,
-- bildirim yönetimi,
-- dinamik frontend yapısı,
 - REST API iletişimi
 
-gibi farklı yazılım bileşenlerini tek bir sistem içerisinde birleştiren modüler bir yapı hedeflenmiştir.
+gibi farklı modülleri bir araya getiren modüler bir yazılım mimarisi üzerine kurulmuştur.
 
-TaskFlow'un temel mimari yaklaşımı, frontend ile backend işlemlerinin birbirinden ayrılmasıdır.
+TaskFlow'un temel amacı, kullanıcıların günlük görevlerini yalnızca listelemek
+yerine bu görevleri projeler, tarihler, öncelikler ve durumlar ile ilişkilendirerek
+daha sistematik şekilde yönetebilmesini sağlamaktır.
 
-Frontend tarafındaki kullanıcı etkileşimleri JavaScript tabanlı modüller aracılığıyla yönetilirken, backend tarafındaki API işlemleri Node-RED flow yapıları üzerinden gerçekleştirilmektedir.
+Uygulama mimarisi frontend ve backend katmanlarının birbirinden ayrılmasına
+dayanmaktadır.
 
-Bu yapı sayesinde uygulamanın kullanıcı arayüzü ile backend iş mantığının birbirinden bağımsız olarak geliştirilebilmesi amaçlanmıştır.
+Frontend tarafında JavaScript tabanlı dinamik yapı kullanılırken backend
+iş akışları Node-RED üzerinde oluşturulan flow'lar üzerinden yönetilmektedir.
+
+Bu yapı sayesinde kullanıcı arayüzü ile backend servislerinin sorumlulukları
+birbirinden ayrılmıştır.
 
 ---
 
-# Temel Özellikler
+# ✨ Temel Özellikler
 
-## Kullanıcı Yönetimi
+## 🔐 Kullanıcı Yönetimi
 
-TaskFlow kullanıcı işlemleri için kapsamlı bir authentication yapısı kullanmaktadır.
+TaskFlow içerisinde kullanıcı işlemleri ayrı bir authentication katmanı
+üzerinden yönetilmektedir.
 
-Desteklenen temel işlemler:
+Desteklenen işlemler:
 
 - Kullanıcı kayıt işlemi
 - Kullanıcı giriş işlemi
-- Kullanıcı çıkış işlemi
+- JWT tabanlı oturum yönetimi
 - Google ile giriş
 - Firebase Authentication
-- JWT oluşturma
-- JWT doğrulama
 - Şifre sıfırlama
 - Yeni şifre oluşturma
-- Profil bilgilerini görüntüleme
-- Profil bilgilerinin güncellenmesi
-- Kullanıcı ayarlarının yönetilmesi
-
-Authentication katmanı frontend, Firebase ve Node-RED backend arasında çalışan bir veri akışına sahiptir.
+- Kullanıcı profil bilgileri
+- Kullanıcı ayarları
+- Kullanıcı oturum kontrolü
+- Yetkilendirilmiş API istekleri
 
 ---
 
-# Görev Yönetimi
+## 📋 Görev Yönetimi
 
-TaskFlow'un temel modüllerinden biri görev yönetim sistemidir.
+TaskFlow'un ana modüllerinden biri görev yönetim sistemidir.
 
 Kullanıcılar:
 
-- görev oluşturabilir,
-- görevleri düzenleyebilir,
-- görevleri silebilir,
-- görev durumlarını değiştirebilir,
+- yeni görev oluşturabilir,
+- görev düzenleyebilir,
+- görev silebilir,
+- görev durumunu değiştirebilir,
 - görev önceliği belirleyebilir,
-- görevleri projelerle ilişkilendirebilir,
-- görevlerin tamamlanma durumlarını takip edebilir,
-- görev tarihlerini belirleyebilir.
+- görevi projeye bağlayabilir,
+- görev tarihlerini belirleyebilir,
+- tamamlanan görevleri takip edebilir,
+- aktif görevlerini görüntüleyebilir.
 
-Görevler backend API üzerinden alınmakta ve frontend üzerinde dinamik olarak oluşturulmaktadır.
+Görevler farklı ekranlar üzerinden takip edilebilir.
 
-Görev verilerinin frontend üzerinde doğrudan statik olarak tutulması yerine REST API üzerinden alınması sayesinde uygulamanın veri yapısının dinamik olması sağlanmıştır.
-
----
-
-# Proje Yönetimi
-
-TaskFlow içerisinde görevler bağımsız olarak yönetilebildiği gibi projeler altında da gruplanabilir.
-
-Proje sistemi üzerinden:
-
-- proje oluşturma,
-- proje silme,
-- projeye görev ekleme,
-- proje görevlerini görüntüleme,
-- proje bazlı görev takibi,
-- proje durumlarını görüntüleme
-
-işlemleri gerçekleştirilebilir.
-
-Bu yapı görevlerin yalnızca bireysel olarak değil, daha büyük çalışma grupları içerisinde organize edilmesini sağlar.
-
----
-
-# Takvim Sistemi
-
-TaskFlow içerisinde görevlerin tarih bazlı olarak takip edilebilmesi için takvim modülü bulunmaktadır.
-
-Takvim ekranında görevler:
-
-- başlangıç tarihi,
-- teslim tarihi,
-- görev durumu,
-- görev bilgileri
-
-üzerinden görüntülenebilir.
-
-Takvim modülünde **FullCalendar** kullanılarak kullanıcıların görevlerini zaman ekseni üzerinde takip edebilmesi amaçlanmıştır.
-
-Bu yapı sayesinde görev listesi ile takvim görünümü arasında veri bağlantısı oluşturulmaktadır.
-
----
-
-# Analiz ve İstatistikler
-
-TaskFlow yalnızca görev oluşturma ve takip etme işlemlerine odaklanmamaktadır.
-
-Analiz ekranı üzerinden görev ve proje verileri çeşitli metrikler üzerinden incelenebilir.
-
-Analiz kapsamında:
-
-- toplam görev sayısı,
-- tamamlanan görevler,
-- devam eden görevler,
-- bekleyen görevler,
-- proje dağılımları,
-- görev öncelikleri,
-- görev durumları,
-- proje performansı
-
-gibi veriler görselleştirilebilir.
-
-Bu bölümün temel amacı kullanıcıya yalnızca görev listesini göstermek yerine çalışma performansı hakkında özet bilgi sağlamaktır.
-
----
-
-# AI Destekli İçerikler
-
-TaskFlow içerisinde AI destekli içerik üretimi için bir AI katmanı bulunmaktadır.
-
-AI sistemi dashboard üzerinde kullanıcıya dinamik içerikler ve öneriler sunmak amacıyla kullanılmaktadır.
-
-Bu yapı kullanıcı tarafından oluşturulan görev verilerini temel alarak:
-
-- görev odaklı öneriler,
-- dinamik içerikler,
-- çalışma önerileri,
-- görevlerle ilişkili AI çıktıları
-
-oluşturulabilecek şekilde tasarlanmıştır.
-
-AI servisinin backend üzerinden yönetilmesi sayesinde API anahtarlarının frontend kaynak koduna doğrudan eklenmesinin önüne geçilmesi hedeflenmiştir.
-
-AI API erişim bilgileri environment variable üzerinden yönetilmektedir.
-
----
-
-# Sistem Mimarisi
-
-TaskFlow temel olarak üç ana katmandan oluşmaktadır:
+Örneğin:
 
 ```text
-┌─────────────────────────────────────────────┐
-│                  TaskFlow                   │
-│                 Web Client                  │
-└──────────────────────┬──────────────────────┘
-                       │
-                       │ HTTP / Fetch API
-                       ▼
-┌─────────────────────────────────────────────┐
-│                 Frontend                    │
-│                                             │
-│ HTML / CSS / JavaScript                    │
-│ Bootstrap / jQuery                         │
-│ Mustache / SurveyJS                        │
-│ FullCalendar / DataTables                  │
-└──────────────────────┬──────────────────────┘
-                       │
-                       │ REST API
-                       ▼
-┌─────────────────────────────────────────────┐
-│                 Node-RED                    │
-│                                             │
-│ HTTP In                                     │
-│ Function                                    │
-│ Change                                      │
-│ Switch                                      │
-│ HTTP Request                                │
-│ Database Operations                         │
-│ HTTP Response                               │
-└──────────────────────┬──────────────────────┘
-                       │
-                       ▼
-┌─────────────────────────────────────────────┐
-│                  Database                   │
-│                                             │
-│ User Data                                   │
-│ Task Data                                   │
-│ Project Data                                │
-│ Authentication Data                         │
-└─────────────────────────────────────────────┘
+Dashboard
+    │
+    ├── Toplam görev
+    ├── Aktif görev
+    ├── Tamamlanan görev
+    └── Bugünkü görevler
