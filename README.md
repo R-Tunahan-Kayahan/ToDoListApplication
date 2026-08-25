@@ -1,181 +1,92 @@
 # TaskFlow
 
-TaskFlow, görev ve proje yönetimi süreçlerini tek bir platform üzerinden gerçekleştirmek amacıyla geliştirilmiş web tabanlı bir task management uygulamasıdır.
+<p align="center">
+  <strong>Modern Web-Based Task & Project Management Platform</strong>
+</p>
 
-Uygulama; kullanıcıların görevlerini ve projelerini oluşturmasına, düzenlemesine, takip etmesine ve durumlarını yönetmesine olanak sağlamaktadır. Bunun yanında takvim, analiz, bildirim, çoklu dil ve yapay zekâ destekli içerik özellikleri ile kullanıcıların çalışma süreçlerini tek bir platform üzerinden yönetebilmesi hedeflenmiştir.
+<p align="center">
+  Task management, project tracking, calendar planning, analytics and AI-assisted productivity features
+  in a modular web application.
+</p>
 
-TaskFlow, frontend ve backend işlemlerinin birbirinden ayrıldığı modüler bir mimari üzerine kurulmuştur. Frontend tarafında JavaScript tabanlı dinamik yapı kullanılırken, backend tarafındaki API ve veri işleme süreçleri Node-RED flow'ları üzerinden yönetilmektedir.
-
----
-
-## 🚀 Özellikler
-
-### 🔐 Kullanıcı Yönetimi
-
-TaskFlow içerisinde kullanıcıların uygulamaya güvenli bir şekilde erişebilmesi için çeşitli kimlik doğrulama ve kullanıcı yönetimi özellikleri bulunmaktadır.
-
-- Kullanıcı kayıt işlemleri
-- Kullanıcı giriş işlemleri
-- Google ile giriş
-- Firebase Authentication entegrasyonu
-- JWT tabanlı oturum yönetimi
-- Şifre sıfırlama
-- Yeni şifre oluşturma
-- Kullanıcı profil bilgilerinin görüntülenmesi
-- Kullanıcı profil bilgilerinin güncellenmesi
-- Kullanıcı ayarlarının yönetilmesi
-
-Kullanıcı başarılı bir şekilde giriş yaptığında uygulama tarafından oluşturulan oturum token'ı kullanılarak sonraki API isteklerinin kimlik doğrulaması gerçekleştirilmektedir.
+<p align="center">
+  <a href="https://github.com/R-Tunahan-Kayahan/ToDoListApplication">
+    <img src="https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github" alt="GitHub Repository">
+  </a>
+  <img src="https://img.shields.io/badge/Node.js-Backend-339933?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js">
+  <img src="https://img.shields.io/badge/Node--RED-Backend%20Flows-BF0000?style=for-the-badge&logo=nodered&logoColor=white" alt="Node-RED">
+  <img src="https://img.shields.io/badge/JavaScript-Frontend-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
+  <img src="https://img.shields.io/badge/Bootstrap-5.3-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap">
+</p>
 
 ---
 
-## 📋 Görev Yönetimi
+## 📌 Overview
 
-TaskFlow'un temel modüllerinden biri görev yönetimidir. Kullanıcılar oluşturdukları görevleri farklı özellikler üzerinden takip edebilmektedir.
+**TaskFlow** is a modular web-based task and project management application designed to provide users with a centralized environment for organizing tasks, managing projects, planning deadlines and analyzing productivity.
 
-- Görev oluşturma
-- Görev düzenleme
-- Görev silme
-- Görev durumlarının değiştirilmesi
-- Görev önceliğinin belirlenmesi
-- Görevlerin tamamlanma durumlarının takip edilmesi
-- Görevlerin projeler ile ilişkilendirilmesi
-- Görev tarih bilgilerinin yönetilmesi
-- Görevlerin takvim üzerinde görüntülenmesi
-- Görevlerin filtrelenmesi ve listelenmesi
+The application separates frontend presentation and backend processing into distinct layers. The frontend is responsible for user interaction, dynamic page management and API communication, while backend operations are orchestrated through **Node-RED flows**.
 
-Görev işlemleri frontend tarafından API üzerinden backend'e gönderilmekte ve Node-RED üzerinde bulunan ilgili flow'lar tarafından işlenmektedir.
+TaskFlow combines:
 
----
+- User authentication
+- Google authentication
+- Task management
+- Project management
+- Calendar-based planning
+- Productivity analytics
+- AI-assisted content generation
+- Multi-language interface support
+- Notification and feedback mechanisms
+- REST-based API communication
 
-## 📁 Proje Yönetimi
-
-TaskFlow, görevlerin daha düzenli şekilde gruplanabilmesi için proje tabanlı çalışma yapısını desteklemektedir.
-
-Kullanıcılar:
-
-- Proje oluşturabilir
-- Proje silebilir
-- Projeleri görüntüleyebilir
-- Projelere görev atayabilir
-- Proje içerisindeki görevleri takip edebilir
-- Proje durumlarını görüntüleyebilir
-- Proje bazlı görev dağılımlarını inceleyebilir
-
-Bu yapı sayesinde birden fazla görevin belirli bir proje altında organize edilmesi sağlanmaktadır.
+The overall architecture is designed to remain modular so that individual application components can be developed and maintained independently.
 
 ---
 
-## 📅 Takvim
+## ✨ Key Features
 
-TaskFlow içerisinde görevlerin tarih bazlı olarak takip edilebilmesi için takvim modülü bulunmaktadır.
+### 🔐 Authentication & User Management
 
-Takvim üzerinden:
+TaskFlow provides an authentication layer for managing application users.
 
-- Görevlerin tarihleri görüntülenebilir
-- Günlük görevler takip edilebilir
-- Tarih bazlı görev planlaması yapılabilir
-- Görevlerin başlangıç ve teslim tarihleri incelenebilir
-- Görevler takvim görünümü üzerinden takip edilebilir
+Supported functionality includes:
 
-Takvim yapısında **FullCalendar** entegrasyonu kullanılmaktadır.
+- User registration
+- User login
+- Password-based authentication
+- Google authentication
+- Firebase Authentication integration
+- Password reset
+- New password creation
+- User profile management
+- User settings management
+- Session/token-based authentication
 
----
-
-## 📊 Analiz ve İstatistikler
-
-TaskFlow içerisinde kullanıcıların görev ve proje süreçlerini inceleyebilmesi için analiz ekranı bulunmaktadır.
-
-Analiz modülü üzerinden:
-
-- Toplam görev sayısı
-- Tamamlanan görevler
-- Devam eden görevler
-- Bekleyen görevler
-- Görev durumlarının dağılımı
-- Görev önceliklerinin dağılımı
-- Proje performansı
-- Görev istatistikleri
-
-gibi bilgiler görüntülenebilmektedir.
-
-Bu yapı sayesinde kullanıcıların çalışma süreçleri yalnızca görev listeleri üzerinden değil, istatistiksel veriler üzerinden de incelenebilmektedir.
+Authentication-related operations are handled through backend API endpoints and environment-based configuration.
 
 ---
 
-## 🤖 AI Destekli İçerikler
+### 📋 Task Management
 
-TaskFlow içerisinde kullanıcıların görev ve çalışma süreçlerine yardımcı olmak amacıyla yapay zekâ destekli içerik üretimi kullanılmaktadır.
+The task management module is the core component of TaskFlow.
 
-AI destekli yapı üzerinden:
+Users can:
 
-- Dashboard üzerinde dinamik içerikler oluşturulması
-- Kullanıcının görevlerine yönelik öneriler
-- Görev verilerine göre içerik oluşturulması
-- Kullanıcı çalışma sürecine yönelik dinamik öneriler
+- Create tasks
+- Update existing tasks
+- Delete tasks
+- Change task status
+- Set task priorities
+- Assign tasks to projects
+- Track task completion
+- Define task dates
+- Monitor active and completed tasks
+- View tasks through different application interfaces
 
-sunulabilmektedir.
+Tasks can be accessed through the REST API and displayed dynamically on the frontend.
 
-AI işlemleri backend tarafındaki API akışları üzerinden gerçekleştirilmekte ve ilgili servis ile iletişim sağlanmaktadır.
+Example endpoint:
 
----
-
-## 🌍 Çoklu Dil Desteği
-
-TaskFlow arayüzünün farklı dillerde kullanılabilmesi için dinamik bir dil yapısı oluşturulmuştur.
-
-Dil sistemi:
-
-- Dil dosyaları üzerinden çalışmaktadır
-- Arayüz metinlerinin merkezi olarak yönetilmesini sağlamaktadır
-- Sayfa içerisindeki metinlerin dinamik olarak değiştirilmesine olanak tanımaktadır
-- Yeni dillerin sisteme eklenebilmesini kolaylaştırmaktadır
-
-Bu yapı sayesinde uygulama içerisindeki statik metinlerin doğrudan sayfa kodlarına bağlı kalması azaltılmıştır.
-
----
-
-## 🔔 Bildirim Sistemi
-
-Kullanıcı işlemlerinin daha anlaşılır şekilde takip edilebilmesi amacıyla bildirim sistemi kullanılmaktadır.
-
-Bildirim sistemi üzerinden:
-
-- Başarılı işlemler
-- Hatalı işlemler
-- Kullanıcı işlemlerinin sonuçları
-- Sistem tarafından oluşturulan bilgilendirmeler
-
-kullanıcıya Toast bildirimleri aracılığıyla aktarılmaktadır.
-
----
-
-# 🏗️ Mimari
-
-TaskFlow, frontend ve backend işlemlerinin birbirinden ayrıldığı web tabanlı ve modüler bir mimari kullanmaktadır.
-
-```text
-                    ┌──────────────────────┐
-                    │       TaskFlow       │
-                    │      Web Client      │
-                    └──────────┬───────────┘
-                               │
-                ┌──────────────┴──────────────┐
-                │                             │
-        ┌───────▼────────┐          ┌────────▼────────┐
-        │   JavaScript   │          │    Templates    │
-        │    Frontend    │          │     Mustache     │
-        └───────┬────────┘          └────────┬────────┘
-                │                            │
-                └──────────────┬─────────────┘
-                               │
-                         REST API / Fetch
-                               │
-                    ┌──────────▼──────────┐
-                    │      Node-RED       │
-                    │   Backend / Flows   │
-                    └──────────┬──────────┘
-                               │
-                    ┌──────────▼──────────┐
-                    │      Database       │
-                    └─────────────────────┘
+```http
+GET /api/tasks
