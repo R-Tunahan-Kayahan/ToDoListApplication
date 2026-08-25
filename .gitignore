@@ -1,0 +1,31 @@
+# Dependencies
+node_modules/
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Firebase credentials
+firebase-service-account.json
+service-account.json
+
+# Node-RED credentials / local config
+flows_cred.json
+.config.nodes.json
+.config.runtime.json
+.config.users.json
+
+# Backup files
+*.backup
+*.bak
+
+# Logs
+*.log
+
+# VS Code
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
