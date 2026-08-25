@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>TaskFlow</title>
+
+    <link rel="icon" type="image/x-icon" href="/images/list.ico" />
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+
+    <!-- FullCalendar -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.19/index.global.min.css"
+    />
+
+    <!-- Survey -->
+    <link rel="stylesheet" href="/css/survey-core.min.css" />
+
+    <!-- Sayfa CSS -->
+    <link rel="stylesheet" href="/css/login.css" />
+
+    <link rel="stylesheet" href="/css/register.css" />
+
+    <link rel="stylesheet" href="/css/resetPassword.css" />
+
+    <link rel="stylesheet" href="/css/resetmail.css" />
+
+    <link rel="stylesheet" href="/css/calendar.css" />
+
+    <!-- DataTables -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/2.3.8/css/dataTables.dataTables.min.css"
+    />
+  </head>
+
+  <body>
+    <div id="app" class="page-container"></div>
+
+    <!-- Toast -->
+
+    <div class="toast-container position-fixed top-0 end-0 p-3">
+      <div
+        id="liveToast"
+        class="toast align-items-center text-bg-success border-0"
+      >
+        <div class="d-flex">
+          <div id="toastMessage" class="toast-body"></div>
+
+          <button
+            type="button"
+            class="btn-close btn-close-white me-2 m-auto"
+            data-bs-dismiss="toast"
+          ></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery -->
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- Bootstrap -->
+
+    <script src="/js/bootstrap.min.js"></script>
+
+    <!-- FullCalendar -->
+
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.19/index.global.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.19/locales-all.global.min.js"></script>
+
+    <!-- Survey -->
+
+    <script src="/js/survey.core.min.js"></script>
+
+    <script src="/js/survey-js-ui.min.js"></script>
+
+    <!-- DataTables -->
+
+    <script src="https://cdn.datatables.net/2.3.8/js/dataTables.min.js"></script>
+
+    <!-- TaskFlow -->
+
+    <script src="/js/api.js"></script>
+
+    <script src="/js/common.js"></script>
+
+    <script src="/js/i18n.js"></script>
+
+    <script src="/js/index.js"></script>
+
+    <!-- Firebase -->
+
+    <script type="module" src="/js/firebaseGoogle.js"></script>
+
+    <!-- Survey Pages -->
+
+    <script src="/js/loginSurvey.js"></script>
+
+    <script src="/js/registerSurvey.js"></script>
+
+    <script src="/js/resetPasswordSurvey.js"></script>
+
+    <script src="/js/newPasswordSurvey.js"></script>
+
+    <!-- Calendar -->
+
+    <script src="/js/calendar.js"></script>
+  </body>
+</html>

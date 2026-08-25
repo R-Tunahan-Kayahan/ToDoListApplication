@@ -1,0 +1,69 @@
+/* --- ANALİZ PANELSİ & STAT KARTLARI --- */
+
+/* Kartların Bootstrap 'row' içinde aralık kazanması ve flex desteği */
+.analytics-stats-row {
+  margin-top: 20px;
+}
+
+/* Stat Kart Sınıfı */
+.stat-card {
+  background: var(--tf-card);
+  border: 1px solid var(--tf-border);
+  border-radius: var(--tf-radius, 18px);
+  padding: 20px 24px;
+  box-shadow: var(--tf-shadow);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Kart Üzerine Gelince Yumuşak Yükselme Efekti */
+.stat-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--tf-primary);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Kart İç Başlığı (Örn: Toplam, Tamamlanan) */
+.stat-card .stat-label {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--tf-muted);
+  margin-bottom: 12px;
+}
+
+/* Kart İçi Sayı Değeri */
+.stat-card .stat-value {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--tf-text);
+  line-height: 1;
+  margin: 0;
+}
+
+/* Kart İçindeki Trend / Değişim Yüzdesi (Opsiyonel) */
+.stat-card .stat-trend {
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.stat-trend.positive {
+  color: #10b981; /* Yeşil */
+}
+
+.stat-trend.negative {
+  color: #ef4444; /* Kırmızı */
+}

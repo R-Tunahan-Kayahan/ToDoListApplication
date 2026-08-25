@@ -1,0 +1,219 @@
+.calendar-wrapper {
+  width: 100%;
+}
+
+#taskCalendar {
+  width: 100%;
+  min-height: 650px;
+}
+
+.fc {
+  font-family: "Poppins", sans-serif;
+}
+
+.fc .fc-toolbar {
+  margin-bottom: 24px;
+}
+
+.fc .fc-toolbar-title {
+  font-size: 21px;
+  font-weight: 600;
+}
+
+.fc .fc-button {
+  background: #4f46e5;
+  border-color: #4f46e5;
+  box-shadow: none;
+}
+
+.fc .fc-button:hover {
+  background: #4338ca;
+  border-color: #4338ca;
+}
+
+.fc .fc-button-active {
+  background: #3730a3 !important;
+  border-color: #3730a3 !important;
+}
+
+.fc .fc-daygrid-day {
+  min-height: 100px;
+}
+
+.fc .fc-daygrid-day-number {
+  color: #374151;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.fc .fc-col-header-cell-cushion {
+  color: #6b7280;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.fc .fc-day-today {
+  background: rgba(79, 70, 229, 0.07) !important;
+}
+
+.fc-event {
+  border: 0 !important;
+  border-radius: 6px !important;
+  padding: 3px 6px !important;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.calendar-divider {
+  margin: 30px 0;
+  border: 0;
+  border-top: 1px solid #e5e7eb;
+}
+
+.calendar-project-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.calendar-project-title > i {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: #eef2ff;
+  color: #4f46e5;
+}
+
+.calendar-project-title h5 {
+  margin: 0 0 3px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.calendar-project-title small {
+  color: #6b7280;
+}
+
+.calendar-project-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.calendar-project-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.calendar-project-card {
+  width: 220px;
+  min-height: 70px;
+
+  display: flex;
+  align-items: center;
+
+  background: #fff;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 12px;
+
+  overflow: hidden;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+
+  transition: 0.2s;
+}
+
+.calendar-project-card:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.calendar-project-color {
+  width: 7px;
+  height: 100%;
+
+  align-self: stretch;
+
+  background: var(--project-color);
+}
+
+.calendar-project-info {
+  padding: 12px 15px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+.calendar-project-info strong {
+  font-size: 14px;
+  color: #1f2937;
+}
+
+.calendar-project-info span {
+  font-size: 12px;
+  color: #6b7280;
+}
+.calendar-project-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.calendar-project-name {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.calendar-project-count {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+@media (max-width: 768px) {
+  #taskCalendar {
+    min-height: 500px;
+  }
+
+  .fc .fc-toolbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+#taskCalendar {
+  width: 100%;
+  min-height: 650px;
+}
+
+.calendar-wrapper {
+  width: 100%;
+}
+
+.fc {
+  font-family: "Poppins", sans-serif;
+}
+
+.fc .fc-button {
+  background: #4f46e5;
+  border-color: #4f46e5;
+}
+
+.fc .fc-button:hover {
+  background: #4338ca;
+}
+
+.fc .fc-day-today {
+  background: rgba(79, 70, 229, 0.08) !important;
+}

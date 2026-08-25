@@ -1,0 +1,129 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #f4f6fb;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.register-container {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.register-card {
+  width: 430px;
+  max-width: 100%;
+
+  background: #fff;
+
+  border-radius: 18px;
+
+  padding: 40px;
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+
+  box-sizing: border-box;
+}
+
+.register-title {
+  text-align: center;
+
+  font-size: 30px;
+
+  font-weight: bold;
+}
+
+.register-subtitle {
+  text-align: center;
+
+  color: #777;
+
+  margin-bottom: 30px;
+}
+
+.divider {
+  display: flex;
+
+  justify-content: center;
+
+  margin: 25px 0;
+
+  color: #777;
+}
+
+#googleRegisterBtn {
+  height: 50px;
+}
+
+.register-links {
+  margin-top: 25px;
+
+  text-align: center;
+}
+
+.register-links a {
+  text-decoration: none;
+}
+
+.register-links a:hover {
+  text-decoration: underline;
+}
+.sd-root-modern {
+  border: none !important;
+
+  box-shadow: none !important;
+
+  background: transparent !important;
+}
+
+.sd-body {
+  padding: 0 !important;
+}
+
+.sd-text {
+  border-radius: 10px !important;
+}
+
+.sd-btn {
+  width: 100% !important;
+
+  height: 48px !important;
+
+  border-radius: 10px !important;
+
+  background: #6f42c1 !important;
+
+  border: none !important;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .register-container {
+    padding: 12px;
+    align-items: flex-start;
+    padding-top: 40px;
+  }
+
+  .register-card {
+    padding: 28px 20px;
+    border-radius: 14px;
+  }
+
+  .register-title {
+    font-size: 24px;
+  }
+
+  .register-subtitle {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+}

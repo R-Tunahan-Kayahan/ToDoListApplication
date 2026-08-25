@@ -1,0 +1,103 @@
+{
+  "app": {
+    "name": "TaskFlow",
+    "version": "v1.0.0"
+  },
+  "sidebar": {
+    "dashboard": "Kontrol Paneli",
+    "tasks": "Görevler",
+    "projects": "Projeler",
+    "calendar": "Takvim",
+    "focus": "Odak Süresi",
+    "statistics": "Analiz",
+    "settings": "Ayarlar",
+    "about": "Hakkında",
+    "logout": "Çıkış Yap",
+    "login": "Giriş Yap",
+    "register": "Kayıt Ol"
+  },
+  "dashboard": {
+    "title": "Kontrol Paneli",
+    "welcome": "Tekrar Hoş Geldiniz",
+    "today": "Bugün",
+    "overview": "Genel Bakış",
+    "recentTasks": "Son Görevler",
+    "activeTasks": "Aktif Görevler",
+    "completedTasks": "Tamamlanan Görevler",
+    "todayDeadline": "Bugünkü Teslimler",
+    "projectCount": "Projeler",
+    "taskCount": "Görevler",
+    "focusTime": "Odak Süresi",
+    "aiAdvisor": "AI Danışmanı",
+    "analysis": "Analiz",
+    "recommendation": "Öneri",
+    "loadingAI": "Yapay zeka analiz ediyor...",
+    "retry": "Tekrar Dene",
+    "guestTitle": "Misafir Modu",
+    "guestMessage": "Lütfen giriş yapın."
+  },
+  "tasks": {
+    "title": "Görevler",
+    "newTask": "Yeni Görev",
+    "search": "Görev Ara",
+    "status": "Durum",
+    "priority": "Öncelik",
+    "deadline": "Son Tarih"
+  },
+  "projects": {
+    "title": "Projeler",
+    "newProject": "Yeni Proje",
+    "category": "Kategori",
+    "progress": "İlerleme"
+  },
+  "profile": {
+    "title": "Profil",
+    "username": "Kullanıcı Adı",
+    "email": "E-Posta",
+    "picture": "Profil Resmi",
+    "focusTime": "Odak Süresi",
+    "completedTasks": "Tamamlanan Görev",
+    "save": "Kaydet"
+  },
+  "settings": {
+    "title": "Ayarlar",
+    "theme": "Karanlık Tema",
+    "language": "Dil",
+    "about": "Uygulama Hakkında",
+    "help": "Yardım ve Destek"
+  },
+  "login": {
+    "title": "Giriş Yap",
+    "email": "E-Posta",
+    "password": "Şifre",
+    "remember": "Beni Hatırla",
+    "forgotPassword": "Şifremi Unuttum",
+    "button": "Giriş Yap",
+    "google": "Google ile Giriş Yap",
+    "noAccount": "Hesabınız yok mu?",
+    "registerNow": "Kayıt Ol",
+    "success": "Giriş başarılı.",
+    "failed": "E-posta veya şifre hatalı.",
+    "serverError": "Sunucu hatası."
+  },
+  "register": {
+    "title": "Kayıt Ol",
+    "username": "Kullanıcı Adı",
+    "email": "E-Posta",
+    "password": "Şifre",
+    "confirmPassword": "Şifreyi Doğrula",
+    "button": "Kayıt Ol",
+    "alreadyAccount": "Zaten bir hesabınız var mı?",
+    "loginNow": "Giriş Yap",
+    "success": "Kayıt başarılı.",
+    "passwordNotMatch": "Şifreler eşleşmiyor.",
+    "emailExists": "Bu e-posta zaten mevcut."
+  },
+  "button": {
+    "save": "Kaydet",
+    "cancel": "İptal",
+    "delete": "Sil",
+    "edit": "Düzenle",
+    "close": "Kapat"
+  }
+}

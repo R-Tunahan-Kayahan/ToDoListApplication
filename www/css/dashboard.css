@@ -1,0 +1,694 @@
+body {
+  background: var(--tf-page-bg);
+  color: var(--tf-text);
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+.tf-wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.tf-sidebar {
+  width: 260px;
+  background: var(--tf-sidebar);
+  color: white;
+  position: fixed;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  padding-top: 20px;
+  box-shadow: 5px 0 25px rgba(0, 0, 0, 0.08);
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: 700;
+  padding: 25px;
+  color: white;
+  letter-spacing: 0.5px;
+}
+
+.logo i {
+  color: var(--tf-primary);
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 20px 0;
+  margin: 0;
+}
+
+.sidebar-menu li {
+  height: 52px;
+  border-radius: 14px;
+  margin: 8px 15px;
+  padding-left: 18px;
+  display: flex;
+  align-items: center;
+  transition: 0.25s;
+}
+
+.sidebar-menu li a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  height: 100%;
+  color: white;
+  text-decoration: none;
+}
+
+.sidebar-menu li:hover {
+  background: var(--tf-sidebar-hover);
+  transform: translateX(5px);
+  cursor: pointer;
+}
+
+.sidebar-menu li.active {
+  background: var(--tf-primary);
+}
+
+.sidebar-menu i {
+  width: 22px;
+  text-align: center;
+}
+
+/* Main & Topbar */
+.tf-main {
+  margin-left: 260px;
+  padding: 30px;
+  width: calc(100% - 260px);
+}
+
+.tf-topbar {
+  height: 75px;
+  background: var(--tf-topbar);
+  border: 1px solid var(--tf-border);
+  border-radius: 20px;
+  padding: 0 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: var(--tf-shadow);
+}
+
+.page-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--tf-text);
+}
+
+.top-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.search-box {
+  position: relative;
+  width: 420px;
+}
+
+.search-box input {
+  padding-left: 45px;
+  background: var(--tf-card-2);
+  color: var(--tf-text);
+  border: 1px solid var(--tf-border);
+}
+
+.search-box input:focus {
+  border-color: var(--tf-primary);
+  box-shadow: 0 0 0 0.2rem rgba(37, 99, 235, 0.15);
+}
+
+.search-box i {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--tf-muted);
+}
+
+/* Cards (Genel) */
+.tf-card {
+  border: 1px solid var(--tf-border);
+  border-radius: var(--tf-radius);
+  background: var(--tf-card);
+  color: var(--tf-text);
+  box-shadow: var(--tf-shadow);
+  padding: 25px;
+  transition: 0.25s;
+  height: 100%;
+}
+
+.tf-card:hover {
+  transform: translateY(-6px);
+}
+
+.tf-card h6 {
+  color: var(--tf-muted);
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 190px 190px auto;
+  gap: 25px;
+}
+
+.top-actions .dropdown {
+  position: relative;
+}
+
+.top-actions .dropdown-menu,
+.dropdown-menu {
+  margin-top: 12px !important;
+  border: 1px solid var(--tf-border);
+  border-radius: 16px;
+  padding: 10px;
+  min-width: 220px;
+  box-shadow: var(--tf-shadow);
+  background: var(--tf-card);
+  color: var(--tf-text);
+}
+
+.dropdown-item {
+  border-radius: 10px;
+  padding: 12px;
+  color: var(--tf-text);
+}
+
+.dropdown-item:hover {
+  background: var(--tf-card-2);
+  color: var(--tf-primary);
+}
+
+/* Focus Card */
+.focus-card {
+  grid-row: 1 / span 2;
+  height: 100%;
+  background: linear-gradient(135deg, var(--tf-primary), #3b82f6);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.timerMode.active {
+  background-color: var(--tf-card);
+  color: var(--tf-text);
+  border-color: var(--tf-border);
+}
+
+/* Stats 2x2 Grid Card */
+.stats-grid-card {
+  grid-row: span 2;
+  min-height: 405px;
+  padding: 0 !important;
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  overflow: hidden;
+}
+
+.stats-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.stats-item:nth-child(1),
+.stats-item:nth-child(3) {
+  border-right: 1px solid var(--tf-border);
+}
+
+.stats-item:nth-child(1),
+.stats-item:nth-child(2) {
+  border-bottom: 1px solid var(--tf-border);
+}
+
+.stats-item i {
+  color: var(--tf-primary);
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.stats-item span {
+  color: var(--tf-muted);
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.stats-item h2 {
+  margin: 0;
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--tf-primary);
+}
+
+/* --- AI ADVISOR KARTI (ÖZEL DÜZENLEME) --- */
+.stats-grid-card #aiCard {
+  padding: 18px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+  align-items: stretch !important;
+  gap: 12px !important;
+  height: 100% !important;
+  width: 100% !important;
+  overflow: hidden !important;
+  text-align: left !important;
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  background: var(--tf-card);
+  border-radius: var(--tf-radius);
+}
+
+.ai-advisor-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--tf-text);
+  margin-bottom: 2px;
+}
+
+.ai-advisor-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.78rem !important;
+  color: var(--tf-muted);
+  line-height: 1.35;
+  text-align: left !important;
+}
+
+.ai-advisor-item i,
+.ai-advisor-item span {
+  flex-shrink: 0;
+}
+
+.ai-advisor-item i,
+.ai-advisor-item span.dot {
+  font-size: 0.85rem;
+  margin-top: 2px;
+}
+
+/* Diğer Bileşenler */
+.table-card {
+  grid-column: 1 / span 2;
+  min-height: 450px;
+}
+
+.activity-card {
+  min-height: 450px;
+}
+
+.recent-task {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.8fr 180px 120px 120px;
+  align-items: center;
+  padding: 22px 25px;
+  border-bottom: 1px solid var(--tf-border);
+  transition: 0.25s;
+  box-sizing: border-box;
+}
+
+.recent-task:hover {
+  background: var(--tf-card-2);
+}
+
+.activity-item {
+  padding: 15px;
+  border-bottom: 1px solid var(--tf-border);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .tf-sidebar {
+    width: 80px;
+  }
+  .logo span,
+  .sidebar-menu span {
+    display: none;
+  }
+  .sidebar-menu li {
+    justify-content: center;
+  }
+  .page-title {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .tf-sidebar {
+    width: 70px;
+  }
+  .tf-main {
+    margin-left: 70px;
+    width: calc(100% - 70px);
+    padding: 15px;
+  }
+  .tf-topbar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+    height: auto;
+    padding: 20px;
+  }
+  .search-box {
+    width: 100%;
+  }
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  .table-card,
+  .focus-card {
+    grid-column: auto;
+    grid-row: auto;
+  }
+}
+
+.ai-advisor-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.ai-item {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 10px;
+  background: var(--tf-card-2);
+  border-radius: 10px;
+  color: var(--tf-text);
+}
+
+.ai-item i {
+  font-size: 18px;
+  margin-top: 3px;
+}
+
+.ai-item strong {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 3px;
+}
+
+.ai-item p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.notification-item {
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--tf-border);
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+.notification-item:hover {
+  background: var(--tf-card-2);
+}
+
+.notification-item:last-child {
+  border-bottom: none;
+}
+
+.notification-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--tf-text);
+}
+
+.notification-message {
+  margin-top: 4px;
+  font-size: 12px;
+  color: var(--tf-muted);
+  line-height: 1.4;
+}
+
+#notificationList {
+  max-height: 380px;
+  overflow-y: auto;
+}
+
+#notificationCount {
+  font-size: 10px;
+  min-width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notification-date {
+  display: block;
+  margin-top: 6px;
+  color: var(--tf-muted);
+  font-size: 11px;
+}
+
+.unread {
+  border-left: 5px solid var(--tf-primary);
+  background: var(--tf-card-2);
+}
+
+.notification-dropdown {
+  width: 380px;
+  max-height: 450px;
+  overflow: hidden;
+  border: 1px solid var(--tf-border);
+  border-radius: 16px;
+  box-shadow: var(--tf-shadow);
+  background: var(--tf-card);
+  color: var(--tf-text);
+}
+
+.notification-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--tf-border);
+  font-weight: 600;
+  color: var(--tf-text);
+}
+
+.notification-header button {
+  font-size: 11px;
+  padding: 2px 6px;
+}
+
+#notificationList {
+  max-height: 360px;
+  overflow-y: auto;
+}
+/* =====================================================
+   TaskFlow Global Profile & Dropdown Component
+===================================================== */
+
+/* 1. Profil Butonları (Tüm Sekmelerde Ortak) */
+#profileBtn,
+.account-btn {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  background: var(--tf-card-2) !important;
+  color: var(--tf-text) !important;
+  border: 1px solid var(--tf-border) !important;
+  padding: 8px 16px !important;
+  border-radius: 30px !important;
+  font-weight: 500 !important;
+  transition: all 0.25s ease !important;
+  cursor: pointer !important;
+  text-decoration: none !important;
+}
+
+#profileBtn:hover,
+.account-btn:hover {
+  background: var(--tf-card) !important;
+  border-color: var(--tf-primary) !important;
+}
+
+#profileBtn img,
+.account-btn img {
+  width: 28px !important;
+  height: 28px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+}
+
+/* 2. Profil Açılır Menü Konteyneri (Dropdown) */
+.top-actions .dropdown {
+  position: relative !important;
+}
+
+.top-actions .dropdown-menu,
+.dropdown-menu {
+  margin-top: 12px !important;
+  border: 1px solid var(--tf-border) !important;
+  border-radius: 16px !important;
+  padding: 10px !important;
+  min-width: 220px !important;
+  box-shadow: var(--tf-shadow) !important;
+  background: var(--tf-card) !important;
+  color: var(--tf-text) !important;
+}
+
+/* 3. Dropdown Menü Öğeleri */
+.dropdown-item {
+  border-radius: 10px !important;
+  padding: 10px 14px !important;
+  font-size: 14px !important;
+  color: var(--tf-text) !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  transition: all 0.2s ease !important;
+  text-decoration: none !important;
+}
+
+.dropdown-item i {
+  color: var(--tf-muted) !important;
+  transition: color 0.2s ease !important;
+}
+
+.dropdown-item:hover {
+  background: var(--tf-card-2) !important;
+  color: var(--tf-primary) !important;
+}
+
+.dropdown-item:hover i {
+  color: var(--tf-primary) !important;
+}
+.search-box {
+  position: relative;
+}
+
+#searchResults {
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+
+  background: var(--tf-card) !important;
+  color: var(--tf-text) !important;
+
+  border: 1px solid var(--tf-border) !important;
+  border-radius: 8px;
+
+  overflow: hidden;
+
+  box-shadow: var(--tf-shadow);
+}
+
+/* Başlık */
+
+.search-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 10px 12px;
+
+  background: var(--tf-card-2) !important;
+  color: var(--tf-text) !important;
+
+  border-bottom: 1px solid var(--tf-border);
+
+  font-size: 13px;
+}
+
+/* Kapat */
+
+#closeSearch {
+  border: 0;
+  background: transparent !important;
+
+  color: var(--tf-muted) !important;
+
+  font-size: 20px;
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+#closeSearch:hover {
+  color: var(--tf-text) !important;
+}
+
+/* Sonuç */
+
+.search-item {
+  padding: 10px 12px;
+
+  background: var(--tf-card) !important;
+  color: var(--tf-text) !important;
+
+  border-bottom: 1px solid var(--tf-border);
+
+  cursor: pointer;
+}
+
+.search-item:last-child {
+  border-bottom: 0;
+}
+
+.search-item:hover {
+  background: var(--tf-card-2) !important;
+}
+
+/* Başlık */
+
+.search-item strong {
+  display: block;
+
+  color: var(--tf-text) !important;
+
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Tür */
+
+.search-item small {
+  display: block;
+
+  margin-top: 3px;
+
+  color: var(--tf-muted) !important;
+
+  font-size: 11px;
+}
+
+/* Sonuç yok */
+
+.search-empty {
+  padding: 15px;
+
+  background: var(--tf-card) !important;
+
+  color: var(--tf-muted) !important;
+
+  text-align: center;
+
+  font-size: 13px;
+}

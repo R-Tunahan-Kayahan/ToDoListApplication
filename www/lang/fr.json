@@ -1,0 +1,104 @@
+{
+  "app": {
+    "name": "TaskFlow",
+    "version": "v1.0.0"
+  },
+  "sidebar": {
+    "dashboard": "Tableau de bord",
+    "tasks": "Tâches",
+    "projects": "Projets",
+    "calendar": "Calendrier",
+    "focus": "Temps de concentration",
+    "statistics": "Statistiques",
+    "profile": "Profil",
+    "settings": "Paramètres",
+    "about": "À propos",
+    "logout": "Déconnexion",
+    "login": "Connexion",
+    "register": "S'inscrire"
+  },
+  "dashboard": {
+    "title": "Tableau de bord",
+    "welcome": "Bon retour",
+    "today": "Aujourd'hui",
+    "overview": "Vue d'ensemble",
+    "recentTasks": "Tâches récentes",
+    "activeTasks": "Tâches actives",
+    "completedTasks": "Tâches terminées",
+    "todayDeadline": "Échéances du jour",
+    "projectCount": "Projets",
+    "taskCount": "Tâches",
+    "focusTime": "Temps de concentration",
+    "aiAdvisor": "Assistant IA",
+    "analysis": "Analyse",
+    "recommendation": "Recommandation",
+    "loadingAI": "Analyse de l'IA...",
+    "retry": "Réessayer",
+    "guestTitle": "Mode Invité",
+    "guestMessage": "Veuillez vous connecter."
+  },
+  "tasks": {
+    "title": "Tâches",
+    "newTask": "Nouvelle tâche",
+    "search": "Rechercher une tâche",
+    "status": "Statut",
+    "priority": "Priorité",
+    "deadline": "Échéance"
+  },
+  "projects": {
+    "title": "Projets",
+    "newProject": "Nouveau projet",
+    "category": "Catégorie",
+    "progress": "Progrès"
+  },
+  "profile": {
+    "title": "Profil",
+    "username": "Nom d'utilisateur",
+    "email": "E-mail",
+    "picture": "Photo de profil",
+    "focusTime": "Temps de concentration",
+    "completedTasks": "Tâches terminées",
+    "save": "Enregistrer"
+  },
+  "settings": {
+    "title": "Paramètres",
+    "theme": "Thème sombre",
+    "language": "Langue",
+    "about": "À propos de l'application",
+    "help": "Aide et support"
+  },
+  "login": {
+    "title": "Connexion",
+    "email": "E-mail",
+    "password": "Mot de passe",
+    "remember": "Se souvenir de moi",
+    "forgotPassword": "Mot de passe oublié",
+    "button": "Connexion",
+    "google": "Connexion avec Google",
+    "noAccount": "Pas de compte ?",
+    "registerNow": "S'inscrire",
+    "success": "Connexion réussie.",
+    "failed": "E-mail ou mot de passe incorrect.",
+    "serverError": "Erreur du serveur."
+  },
+  "register": {
+    "title": "S'inscrire",
+    "username": "Nom d'utilisateur",
+    "email": "E-mail",
+    "password": "Mot de passe",
+    "confirmPassword": "Confirmer le mot de passe",
+    "button": "S'inscrire",
+    "alreadyAccount": "Vous avez déjà un compte ?",
+    "loginNow": "Connexion",
+    "success": "Inscription réussie.",
+    "passwordNotMatch": "Les mots de passe ne correspondent pas.",
+    "emailExists": "Cet e-mail existe déjà."
+  },
+  "button": {
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "close": "Fermer"
+  }
+}

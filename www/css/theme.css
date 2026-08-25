@@ -1,0 +1,117 @@
+/* =====================================================
+   TaskFlow Theme
+===================================================== */
+
+/* 1. Light Theme */
+:root {
+  --tf-page-bg: #f4f7fb;
+  --tf-card: #ffffff;
+  --tf-card-2: #f8fafc;
+  --tf-sidebar: #111827;
+  --tf-sidebar-hover: #1f2937;
+  --tf-topbar: #ffffff;
+  --tf-border: #e5e7eb;
+  --tf-text: #111827;
+  --tf-muted: #6b7280;
+  --tf-primary: #2563eb;
+  --tf-success: #22c55e;
+  --tf-warning: #f59e0b;
+  --tf-danger: #ef4444;
+  --tf-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  --tf-radius: 18px;
+}
+
+/* 2. Dark Theme */
+[data-bs-theme="dark"] {
+  color-scheme: dark;
+  --tf-page-bg: #0b0f19;
+  --tf-card: #131b2e;
+  --tf-card-2: #1a243b;
+  --tf-sidebar: #0f172a;
+  --tf-sidebar-hover: #1e293b;
+  --tf-topbar: #131b2e;
+  --tf-border: #1e293b;
+  --tf-text: #f8fafc;
+  --tf-muted: #94a3b8;
+  --tf-primary: #2563eb;
+  --tf-success: #22c55e;
+  --tf-warning: #f59e0b;
+  --tf-danger: #ef4444;
+  --tf-shadow: 0 15px 35px rgba(0, 0, 0, 0.45);
+}
+
+/* 3. Base Styles */
+body {
+  background: var(--tf-page-bg);
+  color: var(--tf-text);
+}
+
+.tf-sidebar {
+  background: var(--tf-sidebar);
+}
+
+.tf-topbar {
+  background: var(--tf-topbar);
+  border: 1px solid var(--tf-border);
+}
+
+.card,
+.tf-card {
+  background: var(--tf-card);
+  color: var(--tf-text);
+  border: 1px solid var(--tf-border);
+  border-radius: var(--tf-radius);
+  box-shadow: var(--tf-shadow);
+}
+
+.form-control,
+.form-select {
+  background: var(--tf-card-2);
+  color: var(--tf-text);
+  border: 1px solid var(--tf-border);
+}
+
+.modal-content {
+  background: var(--tf-card);
+  color: var(--tf-text);
+  border: 1px solid var(--tf-border);
+}
+
+.dropdown-menu {
+  background: var(--tf-card);
+  border: 1px solid var(--tf-border);
+  color: var(--tf-text);
+}
+
+/* 4. SurveyJS Override */
+.sd-root-modern {
+  background: transparent !important;
+}
+
+.sd-container-modern {
+  background: transparent !important;
+}
+
+.sd-body {
+  background: transparent !important;
+}
+
+/* 5. Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--tf-border);
+  border-radius: 50px;
+}
+
+/* PROFİLE MODAL KISMI */
+
+[data-bs-theme="dark"] #profileModal .modal-content {
+  background: var(--tf-card) !important;
+
+  color: var(--tf-text) !important;
+
+  border: 1px solid var(--tf-border);
+}

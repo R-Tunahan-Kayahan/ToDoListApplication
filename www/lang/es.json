@@ -1,0 +1,104 @@
+{
+  "app": {
+    "name": "TaskFlow",
+    "version": "v1.0.0"
+  },
+  "sidebar": {
+    "dashboard": "Panel",
+    "tasks": "Tareas",
+    "projects": "Proyectos",
+    "calendar": "Calendario",
+    "focus": "Tiempo de enfoque",
+    "statistics": "Estadísticas",
+    "profile": "Perfil",
+    "settings": "Configuración",
+    "about": "Acerca de",
+    "logout": "Cerrar sesión",
+    "login": "Iniciar sesión",
+    "register": "Registrarse"
+  },
+  "dashboard": {
+    "title": "Panel",
+    "welcome": "Bienvenido de nuevo",
+    "today": "Hoy",
+    "overview": "Resumen",
+    "recentTasks": "Tareas recientes",
+    "activeTasks": "Tareas activas",
+    "completedTasks": "Tareas completadas",
+    "todayDeadline": "Vencimientos de hoy",
+    "projectCount": "Proyectos",
+    "taskCount": "Tareas",
+    "focusTime": "Tiempo de enfoque",
+    "aiAdvisor": "Asistente IA",
+    "analysis": "Análisis",
+    "recommendation": "Recomendación",
+    "loadingAI": "La IA está analizando...",
+    "retry": "Reintentar",
+    "guestTitle": "Modo Invitado",
+    "guestMessage": "Inicie sesión para continuar."
+  },
+  "tasks": {
+    "title": "Tareas",
+    "newTask": "Nueva Tarea",
+    "search": "Buscar Tarea",
+    "status": "Estado",
+    "priority": "Prioridad",
+    "deadline": "Fecha límite"
+  },
+  "projects": {
+    "title": "Proyectos",
+    "newProject": "Nuevo Proyecto",
+    "category": "Categoría",
+    "progress": "Progreso"
+  },
+  "profile": {
+    "title": "Perfil",
+    "username": "Nombre de usuario",
+    "email": "Correo electrónico",
+    "picture": "Foto de perfil",
+    "focusTime": "Tiempo de enfoque",
+    "completedTasks": "Tareas completadas",
+    "save": "Guardar"
+  },
+  "settings": {
+    "title": "Configuración",
+    "theme": "Tema oscuro",
+    "language": "Idioma",
+    "about": "Acerca de la aplicación",
+    "help": "Ayuda y soporte"
+  },
+  "login": {
+    "title": "Iniciar sesión",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "remember": "Recordarme",
+    "forgotPassword": "Olvidé mi contraseña",
+    "button": "Iniciar sesión",
+    "google": "Iniciar con Google",
+    "noAccount": "¿No tienes cuenta?",
+    "registerNow": "Registrarse",
+    "success": "Inicio de sesión exitoso.",
+    "failed": "Correo o contraseña incorrectos.",
+    "serverError": "Error del servidor."
+  },
+  "register": {
+    "title": "Registrarse",
+    "username": "Nombre de usuario",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "confirmPassword": "Confirmar contraseña",
+    "button": "Registrarse",
+    "alreadyAccount": "¿Ya tienes una cuenta?",
+    "loginNow": "Iniciar sesión",
+    "success": "Registro exitoso.",
+    "passwordNotMatch": "Las contraseñas no coinciden.",
+    "emailExists": "Este correo ya existe."
+  },
+  "button": {
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "close": "Cerrar"
+  }
+}

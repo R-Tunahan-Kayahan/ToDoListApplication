@@ -1,0 +1,104 @@
+{
+  "app": {
+    "name": "TaskFlow",
+    "version": "v1.0.0"
+  },
+  "sidebar": {
+    "dashboard": "Dashboard",
+    "tasks": "Aufgaben",
+    "projects": "Projekte",
+    "calendar": "Kalender",
+    "focus": "Fokuszeit",
+    "statistics": "Statistiken",
+    "profile": "Profil",
+    "settings": "Einstellungen",
+    "about": "Über",
+    "logout": "Abmelden",
+    "login": "Anmelden",
+    "register": "Registrieren"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Willkommen zurück",
+    "today": "Heute",
+    "overview": "Übersicht",
+    "recentTasks": "Letzte Aufgaben",
+    "activeTasks": "Aktive Aufgaben",
+    "completedTasks": "Abgeschlossene Aufgaben",
+    "todayDeadline": "Heutige Fristen",
+    "projectCount": "Projekte",
+    "taskCount": "Aufgaben",
+    "focusTime": "Fokuszeit",
+    "aiAdvisor": "KI-Berater",
+    "analysis": "Analyse",
+    "recommendation": "Empfehlung",
+    "loadingAI": "KI analysiert...",
+    "retry": "Erneut versuchen",
+    "guestTitle": "Gastmodus",
+    "guestMessage": "Bitte melden Sie sich an."
+  },
+  "tasks": {
+    "title": "Aufgaben",
+    "newTask": "Neue Aufgabe",
+    "search": "Aufgabe suchen",
+    "status": "Status",
+    "priority": "Priorität",
+    "deadline": "Frist"
+  },
+  "projects": {
+    "title": "Projekte",
+    "newProject": "Neues Projekt",
+    "category": "Kategorie",
+    "progress": "Fortschritt"
+  },
+  "profile": {
+    "title": "Profil",
+    "username": "Benutzername",
+    "email": "E-Mail",
+    "picture": "Profilbild",
+    "focusTime": "Fokuszeit",
+    "completedTasks": "Abgeschlossene Aufgaben",
+    "save": "Speichern"
+  },
+  "settings": {
+    "title": "Einstellungen",
+    "theme": "Dunkler Modus",
+    "language": "Sprache",
+    "about": "Über die App",
+    "help": "Hilfe und Support"
+  },
+  "login": {
+    "title": "Anmelden",
+    "email": "E-Mail",
+    "password": "Passwort",
+    "remember": "Angemeldet bleiben",
+    "forgotPassword": "Passwort vergessen",
+    "button": "Anmelden",
+    "google": "Mit Google anmelden",
+    "noAccount": "Noch kein Konto?",
+    "registerNow": "Registrieren",
+    "success": "Anmeldung erfolgreich.",
+    "failed": "E-Mail oder Passwort falsch.",
+    "serverError": "Serverfehler."
+  },
+  "register": {
+    "title": "Registrieren",
+    "username": "Benutzername",
+    "email": "E-Mail",
+    "password": "Passwort",
+    "confirmPassword": "Passwort bestätigen",
+    "button": "Registrieren",
+    "alreadyAccount": "Bereits ein Konto?",
+    "loginNow": "Anmelden",
+    "success": "Registrierung erfolgreich.",
+    "passwordNotMatch": "Passwörter stimmen nicht überein.",
+    "emailExists": "Diese E-Mail existiert bereits."
+  },
+  "button": {
+    "save": "Speichern",
+    "cancel": "Abbrechen",
+    "delete": "Löschen",
+    "edit": "Bearbeiten",
+    "close": "Schließen"
+  }
+}

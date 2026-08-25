@@ -1,0 +1,104 @@
+{
+  "app": {
+    "name": "TaskFlow",
+    "version": "v1.0.0"
+  },
+  "sidebar": {
+    "dashboard": "Dashboard",
+    "tasks": "Tasks",
+    "projects": "Projects",
+    "calendar": "Calendar",
+    "focus": "Focus Time",
+    "statistics": "Statistics",
+    "profile": "Profile",
+    "settings": "Settings",
+    "about": "About",
+    "logout": "Logout",
+    "login": "Login",
+    "register": "Register"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Welcome Back",
+    "today": "Today",
+    "overview": "Overview",
+    "recentTasks": "Recent Tasks",
+    "activeTasks": "Active Tasks",
+    "completedTasks": "Completed Tasks",
+    "todayDeadline": "Today's Deadlines",
+    "projectCount": "Total Projects",
+    "taskCount": "Total Tasks",
+    "focusTime": "Focus Time",
+    "aiAdvisor": "AI Advisor",
+    "analysis": "Analysis",
+    "recommendation": "Recommendation",
+    "loadingAI": "AI is analyzing...",
+    "retry": "Retry",
+    "guestTitle": "Guest Mode",
+    "guestMessage": "Please sign in to access dashboard features."
+  },
+  "tasks": {
+    "title": "Tasks",
+    "newTask": "New Task",
+    "search": "Search Task",
+    "status": "Status",
+    "priority": "Priority",
+    "deadline": "Deadline"
+  },
+  "projects": {
+    "title": "Projects",
+    "newProject": "New Project",
+    "category": "Category",
+    "progress": "Progress"
+  },
+  "profile": {
+    "title": "Profile",
+    "username": "Username",
+    "email": "Email",
+    "picture": "Profile Picture",
+    "focusTime": "Focus Time",
+    "completedTasks": "Completed Tasks",
+    "save": "Save"
+  },
+  "settings": {
+    "title": "Settings",
+    "theme": "Dark Theme",
+    "language": "Language",
+    "about": "About App",
+    "help": "Help and Support"
+  },
+  "login": {
+    "title": "Login",
+    "email": "Email",
+    "password": "Password",
+    "remember": "Remember Me",
+    "forgotPassword": "Forgot Password",
+    "button": "Login",
+    "google": "Sign in with Google",
+    "noAccount": "Don't have an account?",
+    "registerNow": "Register",
+    "success": "Login successful.",
+    "failed": "Incorrect email or password.",
+    "serverError": "Server error."
+  },
+  "register": {
+    "title": "Register",
+    "username": "Username",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "button": "Register",
+    "alreadyAccount": "Already have an account?",
+    "loginNow": "Login",
+    "success": "Registration successful.",
+    "passwordNotMatch": "Passwords do not match.",
+    "emailExists": "This email already exists."
+  },
+  "button": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "close": "Close"
+  }
+}
