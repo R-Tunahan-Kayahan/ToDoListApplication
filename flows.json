@@ -2882,7 +2882,7 @@
         "upload": false,
         "skipBodyParsing": false,
         "swaggerDoc": "",
-        "x": 840,
+        "x": 760,
         "y": 580,
         "wires": [
             [
@@ -2895,7 +2895,7 @@
         "type": "function",
         "z": "google_auth_tab_2026",
         "name": " Google İstek ",
-        "func": "const firebaseApiKey = env.get(\"FIREBASE_API_KEY\");\nif (!msg.payload || !msg.payload.credential) {\n    msg.statusCode = 400;\n    msg.payload = { success: false, message: \"Token (credential) bulunamadı.\" };\n    return [null, msg];\n}\n\nmsg.url = \"https://identitytoolkit.googleapis.com/v1/accounts:lookup?key=\" + firebaseApiKey;\nmsg.method = \"POST\";\nmsg.headers = { \"Content-Type\": \"application/json\" };\nmsg.payload = { idToken: msg.payload.credential };\n\nreturn [msg, null];",
+        "func": "const firebaseApiKey = env.get(\"FIREBASE_API_KEY\");\n\n// Google'dan gelen Firebase ID token'ını önce sakla\nconst credential = msg.payload?.credential;\n\nnode.warn({\n    hasCredential: !!credential,\n    credentialLength: credential?.length || 0,\n    hasFirebaseKey: !!firebaseApiKey,\n    firebaseKeyLength: firebaseApiKey?.length || 0\n});\n\nif (!credential) {\n    msg.statusCode = 400;\n    msg.payload = {\n        success: false,\n        message: \"Token (credential) bulunamadı.\"\n    };\n\n    return [null, msg];\n}\n\nif (!firebaseApiKey) {\n    msg.statusCode = 500;\n    msg.payload = {\n        success: false,\n        message: \"Firebase API key bulunamadı.\"\n    };\n\n    return [null, msg];\n}\n\n// Firebase'e gönderilecek istek\nmsg.url =\n    \"https://identitytoolkit.googleapis.com/v1/accounts:lookup?key=\" +\n    firebaseApiKey;\n\nmsg.method = \"POST\";\n\nmsg.headers = {\n    \"Content-Type\": \"application/json\"\n};\n\nmsg.payload = {\n    idToken: credential\n};\n\nreturn [msg, null];",
         "outputs": 2,
         "timeout": "",
         "noerr": 0,
