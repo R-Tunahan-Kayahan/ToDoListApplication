@@ -1,92 +1,94 @@
 # TaskFlow
 
 <p align="center">
-  <strong>Modern Web-Based Task & Project Management Platform</strong>
+  <img src="www/images/list.ico" width="80" alt="TaskFlow">
 </p>
 
+<h1 align="center">TaskFlow</h1>
+
 <p align="center">
-  Task management, project tracking, calendar planning, analytics and AI-assisted productivity features
-  in a modular web application.
+  Modular Web-Based Task and Project Management Platform
 </p>
 
 <p align="center">
   <a href="https://github.com/R-Tunahan-Kayahan/ToDoListApplication">
-    <img src="https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github" alt="GitHub Repository">
+    <img src="https://img.shields.io/badge/GitHub-Repository-181717?style=flat-square&logo=github" alt="GitHub">
   </a>
-  <img src="https://img.shields.io/badge/Node.js-Backend-339933?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js">
-  <img src="https://img.shields.io/badge/Node--RED-Backend%20Flows-BF0000?style=for-the-badge&logo=nodered&logoColor=white" alt="Node-RED">
-  <img src="https://img.shields.io/badge/JavaScript-Frontend-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
-  <img src="https://img.shields.io/badge/Bootstrap-5.3-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap">
+  <img src="https://img.shields.io/badge/Node.js-Runtime-339933?style=flat-square&logo=node.js&logoColor=white" alt="Node.js">
+  <img src="https://img.shields.io/badge/Node--RED-Backend-BF0000?style=flat-square&logo=nodered&logoColor=white" alt="Node-RED">
+  <img src="https://img.shields.io/badge/JavaScript-Frontend-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript">
+  <img src="https://img.shields.io/badge/MongoDB-Database-47A248?style=flat-square&logo=mongodb&logoColor=white" alt="MongoDB">
+  <img src="https://img.shields.io/badge/Bootstrap-5.3-7952B3?style=flat-square&logo=bootstrap&logoColor=white" alt="Bootstrap">
 </p>
 
 ---
 
-## 📌 Overview
+## Table of Contents
 
-**TaskFlow** is a modular web-based task and project management application designed to provide users with a centralized environment for organizing tasks, managing projects, planning deadlines and analyzing productivity.
-
-The application separates frontend presentation and backend processing into distinct layers. The frontend is responsible for user interaction, dynamic page management and API communication, while backend operations are orchestrated through **Node-RED flows**.
-
-TaskFlow combines:
-
-- User authentication
-- Google authentication
-- Task management
-- Project management
-- Calendar-based planning
-- Productivity analytics
-- AI-assisted content generation
-- Multi-language interface support
-- Notification and feedback mechanisms
-- REST-based API communication
-
-The overall architecture is designed to remain modular so that individual application components can be developed and maintained independently.
-
----
-
-## ✨ Key Features
-
-### 🔐 Authentication & User Management
-
-TaskFlow provides an authentication layer for managing application users.
-
-Supported functionality includes:
-
-- User registration
-- User login
-- Password-based authentication
-- Google authentication
-- Firebase Authentication integration
-- Password reset
-- New password creation
-- User profile management
-- User settings management
-- Session/token-based authentication
-
-Authentication-related operations are handled through backend API endpoints and environment-based configuration.
+- [Project Overview](#project-overview)
+- [Project Objectives](#project-objectives)
+- [Core Features](#core-features)
+- [System Architecture](#system-architecture)
+- [Application Architecture](#application-architecture)
+- [Node-RED Architecture](#node-red-architecture)
+- [Frontend Architecture](#frontend-architecture)
+- [Template Architecture](#template-architecture)
+- [Authentication Architecture](#authentication-architecture)
+- [JWT Architecture](#jwt-architecture)
+- [Firebase and Google Authentication](#firebase-and-google-authentication)
+- [AI Architecture](#ai-architecture)
+- [API Architecture](#api-architecture)
+- [Data Architecture](#data-architecture)
+- [Environment Configuration](#environment-configuration)
+- [Project Structure](#project-structure)
+- [Application Modules](#application-modules)
+- [Application Flow](#application-flow)
+- [Task Management Flow](#task-management-flow)
+- [Project Management Flow](#project-management-flow)
+- [Calendar Architecture](#calendar-architecture)
+- [Analytics Architecture](#analytics-architecture)
+- [SurveyJS Architecture](#surveyjs-architecture)
+- [Mustache Architecture](#mustache-architecture)
+- [Security](#security)
+- [Error Handling](#error-handling)
+- [Development Workflow](#development-workflow)
+- [Installation](#installation)
+- [Running the Application](#running-the-application)
+- [Git Workflow](#git-workflow)
+- [Future Improvements](#future-improvements)
+- [Technologies](#technologies)
+- [Project Links](#project-links)
+- [Author](#author)
 
 ---
 
-### 📋 Task Management
+# Project Overview
 
-The task management module is the core component of TaskFlow.
+**TaskFlow** is a modular web-based task and project management application developed to provide a centralized environment for managing personal tasks, projects, deadlines and productivity data.
 
-Users can:
+The application combines:
 
-- Create tasks
-- Update existing tasks
-- Delete tasks
-- Change task status
-- Set task priorities
-- Assign tasks to projects
-- Track task completion
-- Define task dates
-- Monitor active and completed tasks
-- View tasks through different application interfaces
+- task management,
+- project management,
+- calendar management,
+- analytics,
+- authentication,
+- user settings,
+- AI-assisted content,
+- multi-language support,
+- dynamic forms,
+- template-based rendering,
+- REST API communication
 
-Tasks can be accessed through the REST API and displayed dynamically on the frontend.
+within a single application architecture.
 
-Example endpoint:
+The system is designed around a separation between the **frontend interface**, **backend request processing**, **authentication services**, **external APIs** and **data access layer**.
 
-```http
-GET /api/tasks
+The frontend is implemented using JavaScript-based modules and HTML/CSS resources under the `www/` directory.
+
+Backend operations are orchestrated through **Node-RED** and its flow-based programming model.
+
+The main Node-RED configuration is maintained through:
+
+```text
+flows.json
